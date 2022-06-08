@@ -22,13 +22,17 @@ const VirtualDice = Math.floor(Math.random() * 6) + 1
 const diceButn = document.getElementById('dice-btn');
 diceButn.addEventListener('click',
 function() {
+    // CONTROLLO I DADI SUCCESSIVAMENTE LI CONFRONTO
     document.getElementById('my-dice').innerHTML = MyDice;
     document.getElementById('pc-dice').innerHTML = VirtualDice;
 
+    // CONFRONTO I DADI E SAMPO I MESSAGGI
     if(MyDice === VirtualDice) {
         document.getElementById('your-result').innerHTML = 'pareggio, ritenta..';
+        // SE IL DADO DEL PC HA UN NUMERO PIU ALTO DEL MIO STAMPO UN MESSAGGIO CON SUA VITTORIA
     } else if (MyDice < VirtualDice) {
         document.getElementById('your-result').innerHTML = 'il computer vince';
+        // SE IL MIO DADO UN NUMERO PIU ALTO DEL SUO STAMPO UN MESSAGGIO CON MIA VITTORIA
     } else (MyDice > VirtualDice); {
         document.getElementById('your-result').innerHTML = 'il tuo numero vince';
     }
