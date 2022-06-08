@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mail Check</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <section>
 
-        <label for="usermail">Digita un inddirizzio mail verificato.</label>
+        <!-- qui chiediamo all'utente la sua mail -->
+        <label class="trylabel" for="usermail">Digita un inddirizzio mail verificato.</label>
 
-        <input type="text" id="usermail">
+        <input class="tryinput" type="text" id="usermail">
 
-        <button id="btncheck">Accedi</button>
+        <!-- questo bottone farà partire la verifica -->
+        <button class="trybtn" id="btncheck">Accedi</button>
+
+        <!-- qui comparirà il messaggio per l'utente se mail verificata o sbagliata -->
+        <span class="trymessage" id="adviceuser"></span>
 
     </section>
     

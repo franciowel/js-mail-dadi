@@ -20,15 +20,30 @@ console.log(ServerMail)
 // CHIEDIAMO ALL'UTENTE LA SUA MAIL
 const CheckButn = document.getElementById('btncheck');
 CheckButn.addEventListener('click',
-function() {
-    // LEGGERE LA MAIL DELL'UTENTE DA INPUT
-    const UserMail = document.getElementById('usermail').value;
-    console.log(UserMail)
-}
+    function() {
+        // LEGGERE LA MAIL DELL'UTENTE DA INPUT
+        const UserMail = document.getElementById('usermail').value;
+
+        // UNA VOLTA LETTA LA SUA MAIL LE CONFRONTO CON QUELLE DELLA MIA LISTA
+        let UserSearch = false;
+        for(let i = 0; i < ServerMail.length; i++){
+        const YourMail = ServerMail[i];
+
+            if(YourMail === UserMail) {
+            UserSearch = true;
+            } 
+        }
+
+        // UNA VOLTA CONTROLLATA LA LISTA:
+        // se non c'è : messaggio file not found
+        // se c'è : messaggio di conferma
+        if(UserSearch) {
+            document.getElementById('adviceuser').innerHTML = UserMail + ' ' + 'è una mail verificata';
+            document.getElementById('adviceuser').classList.toggle('active')
+        } else {
+            document.getElementById('adviceuser').innerHTML = UserMail + ' ' + 'non è una mail verificata. Prova con francesco@mail.it';
+            document.getElementById('adviceuser').classList.toggle('error')
+        }
+    }
 
 )
-// UNA VOLTA LETTA LA SUA MAIL CONTROLLO NELLA LISTA DELLE MIE MAIL SE LA SUA VI E
-
-// UNA VOLTA CONTROLLATA LA LISTA:
-    // se non c'è : messaggio file not found
-    // se c'è : messaggio di conferma
