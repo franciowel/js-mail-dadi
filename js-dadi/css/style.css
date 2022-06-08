@@ -1,5 +1,78 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: lightcoral;
+}
+
+/* COMMONS */
+section{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    padding: 2rem 0;
+}
+
+.btn-dice{
+    padding: 0.8rem 1.2rem;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+/* SECTION */
+.contain-dice{
+    background-color: white;
+    width: 70%;
+    border-radius: 30px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.im-dice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.im-dice p{
+    font-size: 0.7rem;
+    padding-top: 0.3rem;
+    color: lightcoral;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.my-dice,
+.pc-dice{
+    width: 100px;
+    height: 100px;
+    border: 5px solid lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    color: lightcoral;
+}
+
+span{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
 }
