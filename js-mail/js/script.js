@@ -14,12 +14,19 @@
 // // START
 
 // DATA UNA LISTA DI MAIL
-const ServerMail = ['francesco@mail.it', 'lolletto@mail.it','armando@mail.it', 'biondina@mail.it']
+const ServerMail = ['francesco@mail.it', 'lolletto@mail.it','armando@mail.it', 'biondina@mail.it'];
 console.log(ServerMail)
-console.log(ServerMail[0])
 
 // CHIEDIAMO ALL'UTENTE LA SUA MAIL
+const CheckButn = document.getElementById('btncheck');
+CheckButn.addEventListener('click',
+function() {
+    // LEGGERE LA MAIL DELL'UTENTE DA INPUT
+    const UserMail = document.getElementById('usermail').value;
+    console.log(UserMail)
+}
 
+)
 // UNA VOLTA LETTA LA SUA MAIL CONTROLLO NELLA LISTA DELLE MIE MAIL SE LA SUA VI E
 
 // UNA VOLTA CONTROLLATA LA LISTA:
